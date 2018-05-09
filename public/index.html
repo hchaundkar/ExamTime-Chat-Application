@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="examtimechatapplication">
+
+<head>
+    <meta charset="utf-8">
+    <title>ExamTime Chat Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/business-and-finance-41/100/question_quiz_mark_bubble_ask_qa-512.png">
+</head>
+
+<body class="animate-area" onload="toggle()">
+
+  <nav class="menu-bar">
+    <h1 style="color:white;"><span style="font-size:50px; font-family:Verdana">ExamTime Chat Application</span>
+    </h1>
+      <a href="index.html"  id="Home"class="option1">Home</a>
+      <a href="#!/register" id="register" class="option2">Register</a>
+      <a href="#!/main"   id="main"  style="visibility: hidden" class="option2">Main</a>
+      <a href="#!/login"  id="login"class="option3">LogIn</a>
+      <a href="#!/logout" onclick="toggle(this)"  style="visibility: hidden" id="logout" class="option3">Logout</a>
+      <a href="#!/contact"  id="contact" class="option4">Contact</a>
+</nav>
+      <div ng-view class="pageview" id= "pageview"></div>
+      <div id="footer">
+          <h2>@copyright- harshada chaundkar</h2>
+      </div>
+
+      <script>
+      var register= document.getElementById('register');
+      var login= document.getElementById('login');
+      var logout= document.getElementById('logout');
+      var main= document.getElementById('main');
+
+
+
+      function toggle(data){
+        var currentUser= JSON.parse(localStorage.getItem('currentUser'));
+        if(currentUser == null){
+
+        }else{
+        var username= currentUser.username;
+        if(data== null){
+        console.log("In logout", data);
+        if(currentUser !=null){
+          login.style.visibility="hidden";
+          register.style.visibility="hidden";
+          main.style.visibility="visible";
+          logout.style.visibility="visible";
+          document.getElementById("contact").setAttribute("class", "option4");
+        }
+      }else{
+        if(data.id == 'logout'){
+          login.style.visibility="visible";
+          register.style.visibility="visible";
+          main.style.visibility="hidden";
+          logout.style.visibility="hidden";
+          console.log("Match");
+          localStorage.removeItem('currentUser');
+          window.open= "http://localhost:3000/index.html#!/";
+        }
+      }
+    }
+      };
+
+
+      </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+    <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/register/register-controller.js"></script>
+    <script src="angular-app/groupChat/groupChat-controller.js"></script>
+    <script src="angular-app/createQuiz/createQuiz-controller.js"></script>
+    <script src="angular-app/login/login-controller.js"></script>
+
+
+
+
+</body>
+
+</html>

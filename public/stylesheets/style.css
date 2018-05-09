@@ -1,0 +1,407 @@
+html{
+  height: 683px;
+  width: 100%;
+}
+body {
+
+    width: 100%;
+    height: 683px;
+    margin: 0;
+    padding: 0;
+
+    }
+
+
+
+#main-header{
+  margin-top: 5%;
+}
+#data{
+  position: absolute;
+  width: 500px;
+  left: 40%;
+  margin-top: 10px;
+}
+
+#data-contact{
+  position: absolute;
+  width: 500px;
+  left: 30%;
+  margin-top: 50px;
+}
+#chatbox{
+  position: absolute;
+  width: 1000px;
+  left: 20%;
+
+  margin-top: 3%;
+}
+
+#homepage{
+  background: url('images/discuss3.jpg');
+  margin-left: 250px;
+  background-repeat: no-repeat;
+
+}
+
+
+
+img {
+
+  display: block;
+  margin-left: 250px;
+  margin-right: auto;
+  width: 40%;
+}
+
+#div1{
+  float: left;
+  clear: left;
+}
+
+#questionbox{
+  position: absolute;
+  width: 500px;
+  left: 40%;
+  margin-top: 40px;
+}
+
+#questionbox-display{
+  position: absolute;
+  width: 500px;
+  left: 20%;
+  margin-top: 10px;
+
+}
+#questions_form{
+  height: inherit;
+  align-items: center;
+  margin-left: 15%;
+}
+    #container {
+        width: inherit;
+        height: inherit;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+
+
+    }
+    #footer {
+        width: inherit;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #21968e;
+    }
+
+
+
+    #createquiz-formgroup{
+      height: 40px;
+
+    }
+
+    #create-quiz-label{
+      height: 20px;
+
+    }
+    #createquiz-formcontrol{
+      height: 30px;
+
+
+    }
+
+
+    #register-form{
+      width: inherit;
+      height: inherit;
+      margin-right: 100px;
+      align-items:flex-start;
+    }
+    .menu-bar{
+      width: inherit;
+      height: 80px;
+      margin: 0;
+      padding: 0;
+      background-color: #21968e;
+    }
+
+a {
+    color: #00f;
+}
+
+ul {
+
+    background-color: white;
+}
+
+
+li {
+
+    color: black;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 50px 50px;
+    text-decoration: none;
+}
+
+.option {
+    position: relative;
+    left: 10px;
+}
+
+.abc {
+    position: absolute;
+    left: 70px;
+}
+
+.option1 {
+    width: 50px;
+    position: absolute;
+    right: 350px;
+    color:white;
+}
+
+.option2 {
+    width: 50px;
+    position: absolute;
+    right: 250px;
+    color:white;
+}
+
+.option3 {
+    width: 50px;
+    position: absolute;
+    right: 150px;
+    color:white;
+}
+
+.option4 {
+    width: 50px;
+    position: absolute;
+    right: 50px;
+    color:white;
+}
+
+
+#pageview{
+
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  background: #c9dbe9;
+
+}
+
+
+div.cq {
+    background-image: url("https://media.giphy.com/media/NFG00qYw7zkm4/giphy.gif");
+    display: inline-block;
+    float: left;
+    width: inherit;
+    height: 250px;
+    background-color: white;
+    color: white;
+    margin-left: 200px;
+    padding-left: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #F08080;
+    padding: 20px;
+    width: 570px;
+    height: 150px;
+    margin: 0 auto;
+    display: table;
+    background-image: url("https://media.giphy.com/media/NFG00qYw7zkm4/giphy.gif");
+}
+
+#rcorners3 {
+    border-radius: 25px;
+    border: 2px solid #F08080;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    border: 2px solid #F08080;
+    padding: 20px;
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+
+
+/*Chat Page CSS*/
+form, p{
+  margin: 0;
+  padding: 0;
+}
+
+input{
+  font: 12px arial;
+}
+
+#user_name{
+  width: 150px;
+  height: 34px;
+}
+
+#roomInput{
+  width: 150px;
+  height: 34px;
+}
+
+#room{
+  float: left;
+  width: 100px;
+}
+
+#user{
+  float: left;
+  width: 100px;
+}
+#wrapper {
+  margin-left:auto;
+    margin-right:auto;
+    height:auto;
+    width:auto;
+  }
+
+  #menu{
+    margin:0 auto;
+    width: 100%;
+    height: 100px;
+    border:1px solid #ACD8F0;
+
+  }
+
+  #content {
+    width: 100%;
+    height: 300px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+#chatMessage {
+    width: 748px;
+    float: left;
+    height: auto;
+    overflow-y: auto;
+    background-color: #FFFFFF;
+
+}
+#onlineUsers {
+    width: 200px;
+    float: right;
+    height: 300px;
+    background-color: #E0E0E0;
+
+}
+
+#userMsg {
+    width:60%;
+    border:1px solid #ACD8F0;
+
+  box-sizing: border-box;
+}
+
+#sendMsg { width: 10%;
+float: left;
+padding-top: 10px;
+}
+
+#createQuiz{
+  width: 10%;
+  padding-top: 10px;
+}
+
+#chatform{
+
+  padding-top: 10px;
+
+}
+
+#chatting{
+  width: 100%;
+  height: 100px;
+}
+
+.title{
+  float: left;
+}
+
+.logout{
+  float: right;
+}
+
+
+/*Login Page CSS*/
+.box-content.box {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+
+.box {
+    background-color: #F7F7F7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.user-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.btn.btn-login:focus {
+    background-color: rgb(104, 145, 162);
+}
+
+.button {
+    background-color: #C70039;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

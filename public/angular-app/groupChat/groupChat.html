@@ -1,0 +1,55 @@
+
+    <body>
+
+        <div id="container">
+          <div id="chatbox">
+            <h3 style="padding-left: 50px; font-size:50px; font-style:bold; text-shadow: 2px 2px white;">Welcome to Chatroom</h3>
+              <div class="row" ng-controller="GroupChatController">
+                  <div class="col-sm-3">
+                      <div class="form-group">
+                          <label id="user" for="username">Username</label>
+                          <input type="text" class="form-control" id="user_name" name="username" ng-model="vm.username" placeholder="Enter username ">
+                          <!-- <small id="userHelp" class="form-text text-muted">Type your username.</small> -->
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <label id="room" for="roomInput">Choose room</label>
+                      <select name="roomInput" id="roomInput" class="form-control" ng-model= "vm.room" ng-options="data.roomName for data in roomList">
+                        <option  id = '' value="">{{roomName}}</option>
+
+                      </select>
+                  </div>
+                  <div class="col sm-3" style="margin-top:10px;" class="pull-right">
+
+                          <button type="button" class="btn btn-primary" ng-click="joinRoom(vm)">Join</button>
+                          <button type="button" class="btn btn-default" ng-click="leave(vm)">Leave</button>
+                          <button type="button" class="btn btn-success" ng-click="inviteFriends(vm)">Invite friends</button>
+
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="well" style="height:200px; padding:15px;" id="chatMessage">
+          <ul id="messages">
+
+          </ul>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-5">
+                      <input type="text" class="form-control"  id="message_send" ng-model="vm.chatMessage" autocapitalize="none">
+                  </div>
+                  <div class="col-sm-3">
+                          <button type="submit" class="btn btn-success"  ng-model="vm.send" ng-click="joinRoom(vm)">Send</button>
+
+                          <button type="button" class="btn btn-success pull-right" ng-click="create()">Create Quiz</button>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+    </body>

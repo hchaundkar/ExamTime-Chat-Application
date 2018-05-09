@@ -1,0 +1,36 @@
+
+    <body>
+
+        <div id="container">
+          <div class="" id="main-header">
+            <h4 style="text-align:center; font-size:50px; font-style:bold; text-shadow: 2px 2px white;">Invite your friends to share knowledge!!!</h4>
+
+          </div>
+          <div id="data">
+            <div ng-if="vm.message" class="alert alert-success" role="alert">
+              <h1>{{ vm.message }}</h1>
+
+
+            </div>
+
+            <form ng-hide="vm.message" name="sendInvite" ng-submit="vm.sendInvite()">
+              <div class="form-group">
+                <label for="roomName">Room Name: </label>
+                <input type="text" class="form-control" id="roomName" placeholder="Room Name" ng-model="vm.roomName" autocapitalize="none">
+                <label for="roomName">E-mail Id:</label>
+                <input type="text" class="form-control" id="emailId" placeholder="EmailId" ng-model="vm.emailId" autocapitalize="none">
+                <br>
+                <button type="submit" class="btn btn-success">Send invite</button>
+              </div>
+
+
+              </form>
+
+          </div>
+
+          </div>
+
+
+
+
+    </body>

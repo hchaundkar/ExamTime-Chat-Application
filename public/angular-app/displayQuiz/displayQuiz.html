@@ -1,0 +1,125 @@
+
+    <body>
+
+        <div id="container">
+          <div id="data">
+            <div ng-if="vm.quizmessage" class="alert alert-success" role="alert">
+              <h1>{{ vm.quizmessage }}</h1>
+            </div>
+
+            </div>
+          <div id="questionbox-display">
+
+
+          <section class="questions">
+                    <form id="quiz_form" ng-hide="vm.message" name="quiz" ng-submit="vm.fetchQuiz()">
+                      <label for= "quizToBeTaken">Quiz Name:</label>
+                      <input type="text" class="form-control" id="quiz_name" name="quizName" ng-model="vm.quizName" placeholder="Enter the name of Quiz "><br>
+                      <button type="submit" class="btn btn-success" value="+ Add Question">Fetch Quiz</button>
+                    </form>
+                      <form id="questions_form" ng-show="vm.message=='true'" name="questions" ng-submit="vm.submitQuiz()">
+                        <label for= "scoretobesent">Please Provide the email id to send the score:</label>
+                        <input type="text" class="form-control" id="scoretobesent" name="scoretobesent" ng-model="vm.sendscoreto" placeholder="Enter the email id "><br>
+                        <label for="quizName" ng-model="vm.quizName" value="{{vm.quizName}}">Quiz Name:  {{vm.quizName}}</label>
+                        <br>
+
+                        <label for="field1">{{vm.qstn1}}</label>
+                           <div class="form-group">
+                               <div class="radio">
+                                   <label>
+                                       <input type="radio" name="qstn1_ans" value="{{vm.ans1_1}}" ng-model="vm.qstn1_ans">
+                                       {{vm.ans1_1}}
+                                   </label>
+                                   <label>
+                                       <input type="radio" name="qstn1_ans" value="{{vm.ans1_2}}" ng-model="vm.qstn1_ans">
+                                       {{vm.ans1_2}}
+                                   </label>
+                               </div>
+
+
+                           </div>
+                           <br>
+                           <label for="field1">{{vm.qstn2}}</label>
+                              <div class="form-group">
+                                  <div class="radio">
+                                      <label>
+                                          <input type="radio" name="qstn2_ans" value="{{vm.ans2_1}}" ng-model="vm.qstn2_ans">
+                                          {{vm.ans2_1}}
+                                      </label>
+                                      <label>
+                                          <input type="radio" name="qstn2_ans" value="{{vm.ans2_2}}" ng-model="vm.qstn2_ans">
+                                          {{vm.ans2_2}}
+                                      </label>
+                                  </div>
+
+
+                              </div>
+
+                              <label for="field1">{{vm.qstn3}}</label>
+                                 <div class="form-group">
+                                     <div class="radio">
+                                         <label>
+                                             <input type="radio" name="qstn3_ans" value="{{vm.ans3_1}}" ng-model="vm.qstn3_ans">
+                                             {{vm.ans3_1}}
+                                         </label>
+                                         <label>
+                                             <input type="radio" name="qstn3_ans" value="{{vm.ans3_2}}" ng-model="vm.qstn3_ans">
+                                             {{vm.ans3_2}}
+                                         </label>
+                                     </div>
+
+
+                                 </div>
+
+                                 <label for="field1">{{vm.qstn4}}</label>
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="qstn4_ans" value="{{vm.ans4_1}}" ng-model="vm.qstn4_ans">
+                                                {{vm.ans4_1}}
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="qstn4_ans" value="{{vm.ans4_2}}" ng-model="vm.qstn4_ans">
+                                                {{vm.ans4_2}}
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+
+                                    <label for="field1">{{vm.qstn5}}</label>
+                                       <div class="form-group">
+                                           <div class="radio">
+                                               <label>
+                                                   <input type="radio" name="qstn5_ans" value="{{vm.ans5_1}}" ng-model="vm.qstn5_ans">
+                                                   {{vm.ans5_1}}
+                                               </label>
+                                               <label>
+                                                   <input type="radio" name="qstn5_ans" value="{{vm.ans5_2}}" ng-model="vm.qstn5_ans">
+                                                   {{vm.ans5_2}}
+                                               </label>
+                                           </div>
+
+                                       </div>
+                           <button type="submit" class="btn btn-success"  onclick="return IsEmpty();" value="Submit Quiz">Submit Quiz</button>
+
+                      </form>
+
+          </section>
+
+</div>
+          </div>
+
+
+<script type="text/javascript">
+function IsEmpty(){
+  if(document.forms['questions_form'].scoretobesent.value === "")
+  {
+    alert("Please Enter Email id");
+    return false;
+  }
+    return true;
+}
+</script>
+
+    </body>

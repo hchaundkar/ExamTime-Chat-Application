@@ -1,0 +1,81 @@
+    <body>
+
+        <div id="container">
+          <div id="data">
+            <div ng-if="vm.message" class="alert alert-success" role="alert">
+              <h1>{{ vm.message }}</h1>
+            </div>
+          </div>
+          <div class="col-md-3" ng-hide="vm.message">
+            <div class="form-group" id="createquiz-formgroup">
+              <label for="sentto" id="create-quiz-label">Send To:</label>
+              <input type="text" class="form-control" id="createquiz-formcontrol" id="sentto" name="sentto" ng-model="vm.sentto" placeholder="Enter the emailid "><br>
+            </div>
+            <div class="form-group" id="createquiz-formgroup">
+              <label for="quiz_name" id="create-quiz-label">Quiz Title:</label>
+              <input type="text" class="form-control" id="createquiz-formcontrol" id="quiz_name" name="quizName" ng-model="vm.quizName" placeholder="Enter the title of Quiz "><br>
+            </div>
+          </div>
+            <div class="col-md-8">
+                      <form id="questions_form" ng-hide="vm.message" name="questions" ng-submit="vm.addQuestion()">
+                              <div class="form-group" id="createquiz-formgroup">
+                                  <label for="field1" id="create-quiz-label">Enter your Question 1</label>
+                                  <input type="text" class="form-control" id="createquiz-formcontrol" id="field1" name="qstn1" ng-model="vm.qstn1" placeholder="Enter your question here">
+                              </div>
+                              <div class="form-group form-inline ">
+                                  <input type="text" id="left-input" class="form-control" id="createquiz-formcontrol" name="ans1_1"  ng-model="vm.ans1_1" placeholder="Answer choice 1">
+                                  <input type="text" id="middle-input" class="form-control" id="createquiz-formcontrol" name="ans1_2"  ng-model="vm.ans1_2" placeholder="Answer choice 2">
+                                  <input type="text" id="right-input" class="form-control" id="createquiz-formcontrol" name="corr1"  ng-model="vm.corr1" placeholder="Corrrect choice 2">
+                              </div>
+                              <div class="form-group" id="createquiz-formgroup">
+                                  <label for="field1" id="create-quiz-label">Enter your Question 2</label>
+                                  <input type="text" class="form-control" id="createquiz-formcontrol" id="field1" name="qstn2" ng-model="vm.qstn2" placeholder="Enter your question here">
+                              </div>
+                              <div class="form-group form-inline ">
+                                <input type="text" id="left-input" class="form-control" id="createquiz-formcontrol" name="ans2_1"  ng-model="vm.ans2_1" placeholder="Answer choice 1">
+                                <input type="text" id="middle-input" class="form-control" id="createquiz-formcontrol" name="ans2_2"  ng-model="vm.ans2_2" placeholder="Answer choice 2">
+                                <input type="text" id="right-input" class="form-control" id="createquiz-formcontrol" name="corr2"  ng-model="vm.corr2" placeholder="Corrrect choice 2">
+                              </div>
+                              <div class="form-group" id="createquiz-formgroup">
+                                  <label for="field1" id="create-quiz-label">Enter your Question 3</label>
+                                  <input type="text" class="form-control" id="createquiz-formcontrol" id="field3" name="qstn3" ng-model="vm.qstn3" placeholder="Enter your question here">
+                              </div>
+                              <div class="form-group form-inline ">
+                                  <input type="text" id="left-input3" class="form-control" id="createquiz-formcontrol" name="ans3_1"  ng-model="vm.ans3_1" placeholder="Answer choice 1">
+                                  <input type="text" id="middle-input3" class="form-control" id="createquiz-formcontrol" name="ans3_2"  ng-model="vm.ans3_2" placeholder="Answer choice 2">
+                                  <input type="text" id="right-input3" class="form-control" id="createquiz-formcontrol" name="corr3"  ng-model="vm.corr3" placeholder="Corrrect choice 2">
+                              </div>
+                              <div class="form-group" id="createquiz-formgroup">
+                                  <label for="field1" id="create-quiz-label">Enter your Question 4</label>
+                                  <input type="text" class="form-control" id="createquiz-formcontrol" id="field4" name="qstn4" ng-model="vm.qstn4" placeholder="Enter your question here">
+                              </div>
+                              <div class="form-group form-inline ">
+                                  <input type="text" id="left-input4" class="form-control" id="createquiz-formcontrol" name="ans4_1"  ng-model="vm.ans4_1" placeholder="Answer choice 1">
+                                  <input type="text" id="middle-input4" class="form-control" id="createquiz-formcontrol" name="ans4_2"  ng-model="vm.ans4_2" placeholder="Answer choice 2">
+                                  <input type="text" id="right-input4" class="form-control" id="createquiz-formcontrol" name="corr4"  ng-model="vm.corr4" placeholder="Corrrect choice 2">
+                              </div>
+                              <div class="form-group" id="createquiz-formgroup">
+                                  <label for="field1" id="create-quiz-label">Enter your Question 5</label>
+                                  <input type="text" class="form-control" id="createquiz-formcontrol" id="field5" name="qstn5" ng-model="vm.qstn5" placeholder="Enter your question here">
+                              </div>
+                              <div class="form-group form-inline ">
+                                  <input type="text" id="left-input" class="form-control" id="createquiz-formcontrol" name="ans5_1"  ng-model="vm.ans5_1" placeholder="Answer choice 1">
+                                  <input type="text" id="middle-input" class="form-control" id="createquiz-formcontrol" name="ans5_2"  ng-model="vm.ans5_2" placeholder="Answer choice 2">
+                                  <input type="text" id="right-input" class="form-control" id="createquiz-formcontrol" name="corr5"  ng-model="vm.corr5" placeholder="Corrrect choice 2">
+                              </div>
+
+                          <div class="form-group" id="createquiz-formgroup">
+                              <button type="submit" class="btn btn-success" value="+ Add Question">Create Quiz</button>
+
+
+                          </div>
+
+
+                      </form>
+
+
+</div>
+          </div>
+
+
+</body>

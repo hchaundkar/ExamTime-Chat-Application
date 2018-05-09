@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ExamTime Chat Application</title>
+        <style>
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+          <div class="box box-content">
+
+              <img id="user-img" class="user-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+              <form class="login" ng-hide="vm.loggedInUser" name="login" ng-submit="vm.login()">
+
+                  <input type="text" id="username" class="form-control" ng-model="vm.username" placeholder="Username" required autofocus>
+                  <br>
+                  <input type="password" id="password" class="form-control" ng-model="vm.password" placeholder="Password" required>
+                  <br>
+                  <button class="btn btn-lg btn-primary btn-block btn-login" type="submit">Log in</button>
+              </form>
+
+          </div>
+          </div>
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<body>
+        <div id="container">
+          <div id="data">
+            <div ng-if="vm.message" class="alert alert-success" role="alert">
+              <p>{{ vm.message }}</p>
+            </div>
+          <h1 style="align-content: center">Register</h1>
+          <form id="register-form" ng-hide="vm.message" name="register" ng-submit="vm.register()">
+            <div class="form-group">
+              <label for="firstname">FirstName</label>
+              <input type="text" class="form-control" id="firstname" placeholder="FirstName" ng-model="vm.firstname" autocapitalize="none">
+            </div>
+            <div class="form-group">
+              <label for="lastname">LastName</label>
+              <input type="text" class="form-control" id="lastname" placeholder="LastName" ng-model="vm.lastname" autocapitalize="none">
+            </div>
+            <div class="form-group">
+              <label for="emailid">EmailId</label>
+              <input type="email" class="form-control" id="emailid" placeholder="EmailId" ng-model="vm.emailid" autocapitalize="none">
+            </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username" ng-model="vm.username" autocapitalize="none">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" ng-model="vm.password" autocapitalize="none">
+          </div>
+          <div class="form-group">
+            <label for="password-repeat">Repeat Password</label>
+            <input type="password" class="form-control" id="password-repeat" placeholder="Password" ng-model="vm.passwordRepeat" autocapitalize="none">
+          </div>
+          <button type="submit" class="btn btn-success">Register</button>
+          </form>
+        </div>
+          </div>
+    </body>

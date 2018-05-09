@@ -1,0 +1,25 @@
+
+    <body>
+
+        <div id="container">
+          <div id="questionbox">
+
+            <h1>Create Room</h1>
+            <br>
+            <form  style="width: 500px"ng-hide="vm.loggedInUser" name="createRoom" ng-submit="vm.createRoom()">
+              <div class="form-group">
+                <label for="roomName">Room Name:</label>
+                <input type="text" class="form-control" id="roomName" placeholder="Room Name" ng-model="vm.roomName" autocapitalize="none">
+              </div>
+              <br>
+              <button type="submit" class="btn btn-success">Create Room</button>
+              </form>
+
+
+</div>
+          </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+    </body>
