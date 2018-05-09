@@ -1,5 +1,5 @@
 # ExamTime-Chat-Application
-It is a web application chat application which allows the user to create discussion rooms and invite friends to join the room. It also allows you to create quiz and send the quiz to friends via email.
+It is a web based chat application which allows the user to create discussion rooms and invite friends to join the room. It also allows you to create quiz and send the quiz to friends via email.
 
 ## Setup And Installation:
 
